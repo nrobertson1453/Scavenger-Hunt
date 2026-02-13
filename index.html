@@ -80,6 +80,10 @@
 
             function typing() {
                 if (i < text.length) {
+                    let char = text.charAt(i);
+
+    
+                if (char === " ") char = "\u00A0";
                     responseElement.innerText += text.charAt(i);
                     i++;
                     setTimeout(typing, 50);
